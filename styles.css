@@ -23,7 +23,7 @@ body {
     position: absolute;
     width: 100px; /* Adjust size as needed */
     height: 100px; /* Adjust size as needed */
-    background-color: transparent; /* Transparent background */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
     border: 2px solid rgba(0, 255, 0, 1); /* Green border */
   }
   
@@ -81,7 +81,7 @@ body {
       border-color: rgba(0, 255, 0, 1); /* Green border */
     }
     25%, 75% {
-      border-color: rgba(0, 255, 0, 0); /* Transparent border */
+      border-color: rgba(0, 255, 0, 1); /* Green border */
     }
   }
   
