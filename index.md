@@ -4,17 +4,17 @@ layout: default
 
 <!-- HTML and CSS code goes here -->
 
-<div style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <div class="spinner" style="font-family: 'Anonymous Pro', monospace; text-transform: uppercase; color: red; font-size: 72px; animation: spin 2s infinite linear;">COOPER</div>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; perspective: 1000px;">
+  <div class="logo" style="font-family: 'Orbitron', sans-serif; font-size: 72px; color: red; animation: spin 5s infinite linear; transform-style: preserve-3d;">COOPER</div>
 </div>
 
 <style>
   @keyframes spin {
     from {
-      transform: rotate(0deg);
+      transform: rotateY(0deg) rotateZ(0deg); /* Initial rotation */
     }
     to {
-      transform: rotate(360deg);
+      transform: rotateY(360deg) rotateZ(360deg); /* Final rotation */
     }
   }
 </style>
