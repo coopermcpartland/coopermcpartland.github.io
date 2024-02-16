@@ -27,7 +27,31 @@ body {
     border: 2px solid rgba(0, 255, 0, 1); /* Green border */
   }
   
-  .front, .back, .right, .left, .top, .bottom {
+  .front {
+    transform: translateZ(50px);
+  }
+  
+  .back {
+    transform: translateZ(-50px) rotateY(180deg);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(50px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+  }
+  
+  .face {
     animation: flicker 1s infinite;
   }
   
