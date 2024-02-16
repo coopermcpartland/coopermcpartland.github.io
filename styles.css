@@ -1,10 +1,21 @@
-.cube {
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+  }
+  
+  .container {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+  }
+  
+  .cube {
     width: 200px; /* Adjust size as needed */
     height: 200px; /* Adjust size as needed */
     position: relative;
     transform-style: preserve-3d;
     animation: rotate-cube 8s infinite linear;
-    margin: 100px auto;
   }
   
   .face {
@@ -12,7 +23,7 @@
     width: 200px; /* Adjust size as needed */
     height: 200px; /* Adjust size as needed */
     background-color: rgba(255, 255, 255, 0.8); /* Adjust color and opacity as needed */
-    border: 1px solid #000; /* Optional: Adjust border */
+    border: 2px solid #0f0; /* Green outline */
     line-height: 200px; /* Optional: Center text */
     text-align: center; /* Optional: Center text */
   }
