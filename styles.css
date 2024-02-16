@@ -40,7 +40,12 @@ body {
   }
   
   .back, .right, .left, .top, .bottom {
-    background-color: transparent; /* Transparent */
+    background-color: rgba(0, 255, 0, 0.2); /* Green with transparency */
+  }
+  
+  .back::after, .right::after, .left::after, .top::after, .bottom::after {
+    content: '';
+    display: block;
   }
   
   @keyframes rotate-cube {
