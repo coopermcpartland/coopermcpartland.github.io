@@ -22,13 +22,18 @@ body {
     position: absolute;
     width: 150px; /* Adjust size as needed */
     height: 150px; /* Adjust size as needed */
-    border: 2px solid #0f0; /* Green outline */
+    background-color: transparent; /* Transparent background */
     line-height: 150px; /* Optional: Center text */
     text-align: center; /* Optional: Center text */
   }
   
-  .front, .back, .right, .left, .top, .bottom {
-    background-color: rgba(0, 255, 0, 0.2); /* Green with transparency */
+  .front {
+    border: 2px solid rgba(0, 255, 0, 1); /* Green border */
+    background-color: transparent; /* Transparent background */
+  }
+  
+  .back, .right, .left, .top, .bottom {
+    background-color: transparent; /* Transparent */
   }
   
   .front {
@@ -47,9 +52,11 @@ body {
   @keyframes flicker {
     0%, 50%, 100% {
       color: rgba(0, 255, 0, 1); /* Green */
+      border-color: rgba(0, 255, 0, 1); /* Green border */
     }
     25%, 75% {
       color: rgba(0, 255, 0, 0); /* Transparent */
+      border-color: rgba(0, 255, 0, 0); /* Transparent border */
     }
   }
   
