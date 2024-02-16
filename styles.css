@@ -24,22 +24,23 @@ body {
     width: 100px; /* Adjust size as needed */
     height: 100px; /* Adjust size as needed */
     background-color: transparent; /* Transparent background */
+    border: 2px solid rgba(0, 255, 0, 1); /* Green border */
     line-height: 100px; /* Optional: Center text */
     text-align: center; /* Optional: Center text */
   }
   
   .front {
-    border: 2px solid rgba(0, 255, 0, 1); /* Green border */
-    background-color: transparent; /* Transparent background */
+    background-color: rgba(0, 255, 0, 0.2); /* Green with transparency */
+    animation: flicker 1s infinite;
+  }
+  
+  .front::after {
+    content: 'Cooper';
+    color: rgba(0, 255, 0, 1); /* Green */
   }
   
   .back, .right, .left, .top, .bottom {
-    border: 2px solid rgba(0, 255, 0, 1); /* Green border */
     background-color: transparent; /* Transparent */
-  }
-  
-  .front, .back, .right, .left, .top, .bottom {
-    animation: flicker 1s infinite;
   }
   
   @keyframes rotate-cube {
@@ -53,11 +54,9 @@ body {
   
   @keyframes flicker {
     0%, 50%, 100% {
-      color: rgba(0, 255, 0, 1); /* Green */
       border-color: rgba(0, 255, 0, 1); /* Green border */
     }
     25%, 75% {
-      color: rgba(0, 255, 0, 0); /* Transparent */
       border-color: rgba(0, 255, 0, 0); /* Transparent border */
     }
   }
