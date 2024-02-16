@@ -3,23 +3,32 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black; /* Optional: add a black background */
   }
   
   .text-3d {
     font-size: 72px;
-    color: red;
+    color: lime; /* Change the text color to a bright color */
     text-transform: uppercase;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transform: rotateY(45deg) rotateX(-30deg);
-    animation: rotateText 5s infinite alternate;
+    animation: glitch 1s infinite alternate; /* Add glitch animation */
+    font-family: 'Courier New', monospace; /* Use a monospaced font for a more technical look */
   }
   
-  @keyframes rotateText {
+  @keyframes glitch {
     0% {
-      transform: rotateY(45deg) rotateX(-30deg);
+      transform: translateZ(0);
+    }
+    25% {
+      transform: translateZ(20px) rotateY(5deg) rotateX(-5deg); /* Apply 3D rotation and translation */
+    }
+    50% {
+      transform: translateZ(0);
+    }
+    75% {
+      transform: translateZ(20px) rotateY(-5deg) rotateX(5deg); /* Apply 3D rotation and translation */
     }
     100% {
-      transform: rotateY(135deg) rotateX(-30deg);
+      transform: translateZ(0);
     }
   }
   
