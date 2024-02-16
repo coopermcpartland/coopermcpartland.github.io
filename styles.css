@@ -64,6 +64,7 @@ body {
     align-items: center;
     color: rgba(0, 255, 0, 1); /* Green color */
     font-size: 16px; /* Font size */
+    z-index: 1; /* Ensure text appears above the cube faces */
   }
   
   @keyframes rotate-cube {
