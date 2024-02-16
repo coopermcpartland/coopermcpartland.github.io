@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    color: white; /* Change text color to white */
+    color: white;
   }
   
   .container {
@@ -30,14 +30,15 @@ body {
   
   .face span {
     transform: translateZ(50px);
+    color: green; /* Set color of text to green */
   }
   
   .front { transform: rotateY(0deg) translateZ(50px); }
   .back { transform: rotateY(180deg) translateZ(50px); }
-  .left { transform: rotateY(-90deg) translateZ(50px); }
-  .right { transform: rotateY(90deg) translateZ(50px); }
-  .top { transform: rotateX(90deg) translateZ(50px); }
-  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+  .left { transform: rotateY(-90deg) translateZ(50px) translateX(-50px) rotateY(180deg); }
+  .right { transform: rotateY(90deg) translateZ(50px) translateX(50px) rotateY(180deg); }
+  .top { transform: rotateX(90deg) translateZ(50px) translateY(-50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px) translateY(50px); }
   
   @keyframes spin {
     from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
