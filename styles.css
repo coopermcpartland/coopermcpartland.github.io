@@ -1,34 +1,32 @@
-body {
-    background-color: #000; /* Black background */
-  }
-  
-  .container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black; /* Optional: add a black background */
   }
   
   .text-3d {
-    font-family: 'Courier New', monospace; /* Monospace font */
     font-size: 72px;
     color: lime; /* Lime green text */
     text-transform: uppercase;
     animation: glitch 1s infinite alternate;
+    font-family: 'Orbitron', sans-serif; /* Use Orbitron font for a futuristic look */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
   }
   
   @keyframes glitch {
     0%, 100% {
-      transform: translateZ(0);
-      text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime; /* Glitchy text shadow */
+      transform: rotateY(0deg) rotateX(0deg); /* Initial and final state */
     }
-    25%, 75% {
-      transform: translateZ(10px) rotateY(5deg) rotateX(-5deg); /* Apply 3D rotation and translation */
-      text-shadow: none; /* Remove text shadow for glitch effect */
+    25% {
+      transform: rotateY(90deg) rotateX(-90deg) translateZ(200px); /* Rotate text on Y and X axes */
     }
     50% {
-      transform: translateZ(0);
-      text-shadow: 0 0 10px lime, 0 0 20px lime, 0 0 30px lime; /* Glitchy text shadow */
+      transform: rotateY(180deg) rotateX(-180deg) translateZ(200px); /* Rotate text on Y and X axes */
+    }
+    75% {
+      transform: rotateY(270deg) rotateX(-270deg) translateZ(200px); /* Rotate text on Y and X axes */
     }
   }
   
