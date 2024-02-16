@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spinning COOPER</title>
+---
+layout: default
+---
+
+<!-- HTML and CSS code goes here -->
+
+<div style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div class="spinner" style="font-family: 'Anonymous Pro', monospace; text-transform: uppercase; color: red; font-size: 72px; animation: spin 2s infinite linear;">COOPER</div>
+</div>
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-
-  body {
-    background-color: black;
-  }
-
-  .spinner {
-    font-family: 'Anonymous Pro', monospace;
-    text-transform: uppercase;
-    color: red;
-    font-size: 48px;
-    display: inline-block;
-    animation: spin 2s infinite linear;
-  }
-
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -29,8 +18,3 @@
     }
   }
 </style>
-</head>
-<body>
-  <div class="spinner">COOPER</div>
-</body>
-</html>
