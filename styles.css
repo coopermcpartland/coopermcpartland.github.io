@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    font-family: Arial, sans-serif;
   }
   
   .container {
@@ -22,23 +23,15 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+    background-color: green; /* Set color of cube faces to green */
   }
   
-  .face span {
-    transform: translateZ(50px);
-    color: green; /* Set color of text to green */
-  }
-  
-  .front { transform: rotateY(0deg) translateZ(50px); }
-  .back { transform: rotateY(180deg) translateZ(50px); }
-  .left { transform: rotateY(-90deg) translateZ(50px) translateX(-50px) rotateY(180deg); }
-  .right { transform: rotateY(90deg) translateZ(50px) translateX(50px) rotateY(180deg); }
-  .top { transform: rotateX(90deg) translateZ(50px) translateY(-50px); }
-  .bottom { transform: rotateX(-90deg) translateZ(50px) translateY(50px); }
+  .front { transform: translateZ(100px); }
+  .back { transform: rotateY(180deg) translateZ(100px); }
+  .left { transform: rotateY(-90deg) translateZ(100px) translateX(-100px); }
+  .right { transform: rotateY(90deg) translateZ(100px) translateX(100px); }
+  .top { transform: rotateX(-90deg) translateY(-100px) translateZ(100px); }
+  .bottom { transform: rotateX(90deg) translateY(100px) translateZ(100px); }
   
   @keyframes spin {
     from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
