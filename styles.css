@@ -11,8 +11,8 @@ body {
   }
   
   .cube {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
     position: relative;
     transform-style: preserve-3d;
     animation: rotate-cube 8s infinite linear;
@@ -20,36 +20,35 @@ body {
   
   .face {
     position: absolute;
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent faces */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
     border: 2px solid #0f0; /* Green outline */
     line-height: 150px; /* Optional: Center text */
     text-align: center; /* Optional: Center text */
   }
   
   .front {
-    transform: translateZ(75px);
+    background-color: rgba(0, 0, 0, 0); /* Green with transparency */
   }
   
   .back {
-    transform: rotateY(180deg) translateZ(75px);
+    background-color: transparent; /* Transparent */
   }
   
   .right {
-    transform: rotateY(90deg) translateZ(75px);
+    background-color: transparent; /* Transparent */
   }
   
   .left {
-    transform: rotateY(-90deg) translateZ(75px);
+    background-color: transparent; /* Transparent */
   }
   
   .top {
-    transform: rotateX(90deg) translateZ(75px);
+    background-color: transparent; /* Transparent */
   }
   
   .bottom {
-    transform: rotateX(-90deg) translateZ(75px);
+    background-color: transparent; /* Transparent */
   }
   
   @keyframes rotate-cube {
@@ -59,5 +58,18 @@ body {
     to {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     }
+  }
+  
+  @keyframes flicker {
+    0%, 50%, 100% {
+      color: rgba(0, 255, 0, 1); /* Green */
+    }
+    25%, 75% {
+      color: rgba(0, 255, 0, 0); /* Transparent */
+    }
+  }
+  
+  .front {
+    animation: flicker 1s infinite;
   }
   
