@@ -1,40 +1,58 @@
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
+.cube-container {
     perspective: 800px;
-    width: 200px;
-    height: 200px;
-    position: relative;
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    margin: 50px auto;
   }
   
   .cube {
     width: 100%;
     height: 100%;
-    position: absolute;
-    animation: spin 6s infinite linear;
+    position: relative;
     transform-style: preserve-3d;
+    animation: rotate-cube 8s infinite linear;
   }
   
   .face {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: green; /* Set color of cube faces to green */
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust color and opacity as needed */
+    border: 1px solid #000; /* Optional: Adjust border */
+    line-height: 200px; /* Optional: Center text */
+    text-align: center; /* Optional: Center text */
   }
   
-  .front { transform: translateZ(100px); }
-  .back { transform: rotateY(180deg) translateZ(100px); }
-  .left { transform: rotateY(-90deg) translateZ(100px) translateX(-100px); }
-  .right { transform: rotateY(90deg) translateZ(100px) translateX(100px); }
-  .top { transform: rotateX(-90deg) translateY(-100px) translateZ(100px); }
-  .bottom { transform: rotateX(90deg) translateY(100px) translateZ(100px); }
+  .front {
+    transform: translateZ(100px);
+  }
   
-  @keyframes spin {
-    from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-    to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  @keyframes rotate-cube {
+    from {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
   }
   
