@@ -83,17 +83,24 @@ button:hover {
   font-weight: bold;
 }
 
+/* Add the new styles below */
 .project-section {
   display: flex;
-  flex-direction: row-reverse; 
   align-items: flex-start;
+  margin-bottom: 20px; /* Add margin to separate projects */
 }
 
-.project-info {
+.project-details {
   flex: 1;
-  margin-left: 20px; 
+  margin-right: 20px;
 }
+
+.project-header {
+  margin-bottom: 10px;
+}
+
 .project-form {
   flex: 1;
 }
+
 
