@@ -83,11 +83,13 @@ button:hover {
   font-weight: bold;
 }
 
+/* Your existing CSS styles */
+
 /* Add the new styles below */
 .project-section {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px; /* Add margin to separate projects */
+  margin-bottom: 20px;
 }
 
 .project-details {
@@ -99,8 +101,27 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.project-info {
+  margin-bottom: 10px;
+}
+
 .project-form {
   flex: 1;
 }
+
+#keystroke {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: opacity 1s;
+  opacity: 0;
+  z-index: 9999;
+}
+
 
 

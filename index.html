@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Cooper McPartland's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,38 +22,52 @@
     </header>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <!-- Caesar Cipher Encoder/Decoder -->
-      <section id="caesar-cipher" class="project-section">
-          <div class="project-details">
-              <div class="project-header">
-                  <h3>Caesar Cipher Encoder/Decoder</h3>
-              </div>
-              <div class="project-info">
-                  <p>The Caesar Cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.</p>
-                  <p>To encode or decode a message, enter the message, select the shift value (0-25), and choose the operation (Encode or Decode).</p>
-              </div>
-          </div>
-          <div class="project-form">
-              <label for="message">Enter the message:</label><br>
-              <input type="text" id="message" placeholder="Enter message"><br>
-              <label for="shift">Enter the shift value (0-25):</label><br>
-              <input type="number" id="shift" placeholder="Enter shift value"><br>
-              <label for="operation">Select operation:</label><br>
-              <select id="operation">
-                  <option value="encode">Encode</option>
-                  <option value="decode">Decode</option>
-              </select><br>
-              <button onclick="processMessage()">Process</button><br>
-              <div id="processed-message"></div>
-          </div>
-      </section>
-      <!-- End of Caesar Cipher Encoder/Decoder -->
-  
-      <!-- Your other projects go here -->
-  </section>
-  
-  
+        <h2>Projects</h2>
+        <!-- Caesar Cipher Encoder/Decoder -->
+        <section id="caesar-cipher" class="project-section">
+            <div class="project-details">
+                <div class="project-header">
+                    <h3>Caesar Cipher Encoder/Decoder</h3>
+                </div>
+                <div class="project-info">
+                    <p>The Caesar Cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.</p>
+                    <p>To encode or decode a message, enter the message, select the shift value (0-25), and choose the operation (Encode or Decode).</p>
+                </div>
+            </div>
+            <div class="project-form">
+                <label for="message">Enter the message:</label><br>
+                <input type="text" id="message" placeholder="Enter message"><br>
+                <label for="shift">Enter the shift value (0-25):</label><br>
+                <input type="number" id="shift" placeholder="Enter shift value"><br>
+                <label for="operation">Select operation:</label><br>
+                <select id="operation">
+                    <option value="encode">Encode</option>
+                    <option value="decode">Decode</option>
+                </select><br>
+                <button onclick="processMessage()">Process</button><br>
+                <div id="processed-message"></div>
+            </div>
+        </section>
+        <!-- End of Caesar Cipher Encoder/Decoder -->
+
+        <!-- Keylogger Project -->
+        <section id="keylogger" class="project-section">
+            <div class="project-details">
+                <div class="project-header">
+                    <h3>Keylogger</h3>
+                </div>
+                <div class="project-info">
+                    <p>This project demonstrates a simulated keylogger for educational purposes.</p>
+                    <p>Keystrokes made on the website will be displayed momentarily and then fade away.</p>
+                </div>
+            </div>
+            <div class="project-form">
+                <!-- Keylogger will be implemented via JavaScript -->
+            </div>
+        </section>
+        <!-- End of Keylogger Project -->
+
+        <!-- Your other projects go here -->
     </section>
 
     <footer>
@@ -61,6 +75,7 @@
     </footer>
 
     <script src="caesarCipher.js"></script>
-    <script src="script.js"></script> <!-- Include your existing smooth scroll script here -->
+    <script src="script.js"></script> <!-- Include your existing scripts here -->
+    <script src="keylogger.js"></script> <!-- Include your keylogger script here -->
 </body>
 </html>
