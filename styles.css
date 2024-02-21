@@ -54,7 +54,7 @@ header {
 }
 
 .cube__back {
-  transform: rotateY(180deg) translateZ(100px);
+  transform: rotateY(180deg) translateZ(-100px);
 }
 
 .cube__right {
@@ -84,10 +84,10 @@ header {
 
 @keyframes rotate {
   from {
-      transform: rotateY(0);
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   to {
-      transform: rotateY(360deg);
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
 
