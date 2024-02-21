@@ -1,37 +1,89 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
 }
 
 .navbar {
-  background-color: #333;
-  overflow: hidden;
+  margin-top: 10px;
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: #0f0;
-  text-align: center;
-  padding: 14px 20px;
+  color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s;
+  padding: 10px 15px;
 }
 
 .navbar a:hover {
   background-color: #555;
 }
 
-header {
-  background-color: #000;
-  color: #0f0;
-  text-align: center;
-  padding: 100px 0;
+section {
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 8px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#processed-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Cube styles */
 .cube {
   width: 200px;
   height: 200px;
@@ -89,9 +141,4 @@ header {
   to {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
-}
-
-h2 {
-  color: #0f0;
-  font-size: 2em;
 }
