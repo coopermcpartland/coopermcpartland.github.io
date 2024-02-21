@@ -18,11 +18,11 @@ body {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-  background-color: #777;
-  color: #000;
+  background-color: #555;
 }
 
 header {
@@ -32,53 +32,66 @@ header {
   padding: 100px 0;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 3em;
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
 }
 
-section {
-  padding: 50px;
+.cube__front, .cube__back, .cube__right, .cube__left, .cube__top, .cube__bottom {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0f0; /* Green border */
+  box-sizing: border-box; /* Include border in dimensions */
+}
+
+.cube__front {
+  transform: translateZ(100px);
+}
+
+.cube__back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube__right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube__left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube__top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube__bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotateY(0);
+  }
+  to {
+      transform: rotateY(360deg);
+  }
 }
 
 h2 {
   color: #0f0;
-}
-
-.project {
-  border: 1px solid #0f0;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #222;
-  box-shadow: 0px 2px 5px rgba(0, 255, 0, 0.5);
-}
-
-.project h3 {
-  margin-top: 0;
-  color: #0f0;
-}
-
-.project p {
-  margin-bottom: 20px;
-}
-
-.project a {
-  color: #0f0;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-footer {
-  background-color: #333;
-  color: #0f0;
-  text-align: center;
-  padding: 20px 0;
+  font-size: 2em;
 }
