@@ -24,19 +24,25 @@
     <section id="projects">
         <h2>Projects</h2>
         <!-- Caesar Cipher Encoder/Decoder -->
-        <section id="caesar-cipher">
+        <section id="caesar-cipher" class="project-section">
             <h3>Caesar Cipher Encoder/Decoder</h3>
-            <label for="message">Enter the message:</label><br>
-            <input type="text" id="message" placeholder="Enter message"><br>
-            <label for="shift">Enter the shift value (0-25):</label><br>
-            <input type="number" id="shift" placeholder="Enter shift value"><br>
-            <label for="operation">Select operation:</label><br>
-            <select id="operation">
-                <option value="encode">Encode</option>
-                <option value="decode">Decode</option>
-            </select><br>
-            <button onclick="processMessage()">Process</button><br>
-            <div id="processed-message"></div>
+            <div class="project-info">
+                <p>The Caesar Cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.</p>
+                <p>To encode or decode a message, enter the message, select the shift value (0-25), and choose the operation (Encode or Decode).</p>
+            </div>
+            <div class="project-form">
+                <label for="message">Enter the message:</label><br>
+                <input type="text" id="message" placeholder="Enter message"><br>
+                <label for="shift">Enter the shift value (0-25):</label><br>
+                <input type="number" id="shift" placeholder="Enter shift value"><br>
+                <label for="operation">Select operation:</label><br>
+                <select id="operation">
+                    <option value="encode">Encode</option>
+                    <option value="decode">Decode</option>
+                </select><br>
+                <button onclick="processMessage()">Process</button><br>
+                <div id="processed-message"></div>
+            </div>
         </section>
         <!-- End of Caesar Cipher Encoder/Decoder -->
 
