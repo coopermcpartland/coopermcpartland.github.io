@@ -1,9 +1,9 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #000;
+  color: #0f0;
 }
 
 .navbar {
@@ -14,20 +14,20 @@ body {
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #0f0;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #777;
+  color: #000;
 }
 
 header {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #000;
+  color: #0f0;
   text-align: center;
   padding: 100px 0;
 }
@@ -38,19 +38,20 @@ header h1 {
 }
 
 section {
-  padding: 50px 0;
+  padding: 50px;
 }
 
 .project {
-  border: 1px solid #ccc;
+  border: 1px solid #0f0;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #222;
+  box-shadow: 0px 2px 5px rgba(0, 255, 0, 0.5);
 }
 
 .project h3 {
   margin-top: 0;
+  color: #0f0;
 }
 
 .project p {
@@ -58,7 +59,7 @@ section {
 }
 
 .project a {
-  color: #007bff;
+  color: #0f0;
   text-decoration: none;
 }
 
@@ -68,7 +69,7 @@ section {
 
 footer {
   background-color: #333;
-  color: #fff;
+  color: #0f0;
   text-align: center;
   padding: 20px 0;
 }
