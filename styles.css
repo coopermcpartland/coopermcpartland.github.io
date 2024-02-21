@@ -85,8 +85,8 @@ button:hover {
 
 /* Cube styles */
 .cube {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   position: relative;
   margin: 0 auto;
   transform-style: preserve-3d;
@@ -95,34 +95,34 @@ button:hover {
 
 .cube__front, .cube__back, .cube__right, .cube__left, .cube__top, .cube__bottom {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 2px solid #0f0; /* Green border */
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000; /* Black border */
   box-sizing: border-box; /* Include border in dimensions */
 }
 
 .cube__front {
-  transform: translateZ(100px);
+  transform: translateZ(75px);
 }
 
 .cube__back {
-  transform: rotateY(180deg) translateZ(-100px);
+  transform: rotateY(180deg) translateZ(-75px);
 }
 
 .cube__right {
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(75px);
 }
 
 .cube__left {
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(75px);
 }
 
 .cube__top {
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(75px);
 }
 
 .cube__bottom {
-  transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(75px);
 }
 
 .cube__name {
@@ -130,7 +130,7 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -142,3 +142,4 @@ button:hover {
       transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
+
