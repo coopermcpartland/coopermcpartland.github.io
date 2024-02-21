@@ -41,6 +41,10 @@ section {
   padding: 50px;
 }
 
+h2 {
+  color: #0f0;
+}
+
 .project {
   border: 1px solid #0f0;
   padding: 20px;
@@ -65,6 +69,11 @@ section {
 
 .project a:hover {
   text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 footer {
