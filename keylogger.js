@@ -1,23 +1,20 @@
+let keystrokeElement; // Global variable to keep track of the keystroke element
+
 document.addEventListener('keypress', function(event) {
     const key = event.key;
     showKeystroke(key);
 });
 
 function showKeystroke(key) {
-    const keystrokeElement = document.createElement('div');
-    keystrokeElement.id = 'keystroke';
+    // If there's an existing keystroke element, remove it
+    if (keystrokeElement) {
+        keystrokeElement.remove();
+    }
+
+    // Create a new keystroke element
+    keystrokeElement = document.createElement('div');
+    keystrokeElement.className = 'keystroke-item'; // Added class for styling
     keystrokeElement.textContent = key;
-    document.body.appendChild(keystrokeElement);
-
-    // Trigger a reflow before adding the 'show' class to trigger the CSS transition
-    void keystrokeElement.offsetWidth;
-
-    keystrokeElement.style.opacity = '1';
-
-    setTimeout(function() {
-        keystrokeElement.style.opacity = '0';
-        setTimeout(function() {
-            keystrokeElement.remove();
-        }, 1000); // Adjust this value to control how long the keystroke is displayed
-    }, 1000); // Adjust this value to control how long the keystroke is displayed
+    const keyloggerSection = document.getElementById('keylogger');
+    keyloggerSection.appendChild(keystrokeElement);
 }
