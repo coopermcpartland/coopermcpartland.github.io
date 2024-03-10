@@ -78,14 +78,6 @@ button:hover {
   background-color: #333;
 }
 
-#processed-message {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* Your existing CSS styles */
-
-/* Add the new styles below */
 .project-section {
   display: flex;
   align-items: flex-start;
@@ -109,28 +101,12 @@ button:hover {
   flex: 1;
 }
 
-#keystroke {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px 20px;
+#scanResult {
+  margin-top: 20px;
+}
+
+#scanOutput {
+  background-color: #f9f9f9;
+  padding: 10px;
   border-radius: 5px;
-  transition: opacity 1s;
-  opacity: 0;
-  z-index: 9999;
 }
-
-.keystroke-item {
-  margin-right: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 5px 10px;
-  display: inline-block;
-  border-radius: 3px;
-}
-
-
-
-
