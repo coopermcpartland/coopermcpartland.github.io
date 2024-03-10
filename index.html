@@ -32,45 +32,39 @@
 
     <section id="projects">
         <h2>Projects</h2>
-
-        <!-- Vulnerability Scanner Project -->
-        <section class="project-section">
+        <!-- Hashed Password Cracker -->
+        <section id="hashed-password-cracker" class="project-section">
             <div class="project-details">
-                <h3>Vulnerability Scanner</h3>
-                <p>This project is a Vulnerability Scanner that helps identify security weaknesses and vulnerabilities in web applications or networks.</p>
-                <p>Users can input a target URL or IP address, and the scanner will perform scans to detect common vulnerabilities such as SQL injection, cross-site scripting (XSS), and more.</p>
-            </div>
-            <div class="project-form">
-                <form id="vulnScannerForm">
-                    <label for="target">Target URL or IP:</label>
-                    <input type="text" id="target" name="target" placeholder="https://example.com" required>
-
-                    <label for="scanType">Scan Type:</label>
-                    <select id="scanType" name="scanType" required>
-                        <option value="" disabled selected>Select Scan Type</option>
-                        <option value="SQL Injection">SQL Injection</option>
-                        <option value="Cross-site Scripting (XSS)">Cross-site Scripting (XSS)</option>
-                        <option value="Directory Traversal">Directory Traversal</option>
-                        <option value="Command Injection">Command Injection</option>
-                        <!-- Add more scan types as needed -->
-                    </select>
-
-                    <button type="submit">Start Scan</button>
-                </form>
-
-                <div id="scanResult" style="display: none;">
-                    <h3>Scan Results</h3>
-                    <div id="scanOutput"></div>
+                <div class="project-header">
+                    <h3>Hashed Password Cracker</h3>
+                </div>
+                <div class="project-info">
+                    <p>This project demonstrates a simple hashed password cracker for educational purposes. It uses a brute-force technique to crack MD5 hashed passwords.</p>
+                    <p>To crack a password, enter the hashed password and specify the character set and password length.</p>
                 </div>
             </div>
+            <div class="project-form">
+                <label for="hashed-password">Enter the hashed password:</label><br>
+                <input type="text" id="hashed-password" placeholder="Enter hashed password"><br>
+                <label for="character-set">Character set:</label><br>
+                <select id="character-set">
+                    <option value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">Alphanumeric</option>
+                    <option value="abcdefghijklmnopqrstuvwxyz">Lowercase</option>
+                    <option value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">Uppercase</option>
+                    <option value="0123456789">Numeric</option>
+                </select><br>
+                <label for="password-length">Password length:</label><br>
+                <input type="number" id="password-length" placeholder="Password length"><br>
+                <button onclick="crackPassword()">Crack Password</button><br>
+                <div id="cracked-password"></div>
+            </div>
         </section>
-    </section>
 
     <footer>
         <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
     </footer>
     
-    <script src="vulnscanner.js"></script> <!-- Include the script for vulnerability scanning -->
-    <script src="script.js"></script> <!-- Include your existing scripts here -->
+    <script src="script.js"></script>
+    <script src="hash.js"></script>
 </body>
 </html>
