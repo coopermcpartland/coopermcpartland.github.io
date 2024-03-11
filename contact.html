@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Cooper McPartland</title>
+    <title>Cooper McPartland's Contact</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Additional styles for centering the name and navbar */
@@ -54,26 +54,49 @@
             width: 100%;
         }
 
-        /* Additional styles for the Contact section */
-        .contact-info {
-            max-width: 800px;
+        /* Additional styles for the contact form */
+        .contact-form {
+            max-width: 400px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f0f0f0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            text-align: center;
         }
 
-        .contact-info p {
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
             margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Contact Cooper McPartland</h1>
+        <h1>Cooper McPartland's Contact</h1>
         <nav class="navbar">
             <a href="index.html">About Me</a>
             <a href="projects.html">Projects</a>
@@ -81,12 +104,21 @@
         </nav>
     </header>
 
-    <section class="contact-info">
-        <h2>Get In Touch</h2>
-        <p>If you have any inquiries or opportunities, feel free to reach out to me via email or phone:</p>
-        <p>Email: <a href="mailto:coopermcpartland@gmail.com">coopermcpartland@gmail.com</a></p>
-        <p>Phone: <a href="tel:+61490751360">0490 751 360</a></p>
-    </section>
+    <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
     <footer>
         <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
