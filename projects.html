@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper McPartland's Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for centering the name and navbar */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Additional styles for the Projects section */
+        .project-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .project-details {
+            margin-bottom: 10px;
+        }
+
+        .project-info {
+            margin-bottom: 10px;
+        }
+
+        .project-link {
+            display: block;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #333;
+        }
+
+        /* Styles for the screenshot */
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cooper McPartland's Projects</h1>
+        <nav class="navbar">
+            <a href="index.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="project-section">
+        <div class="project-details">
+            <h2>File Encryptor</h2>
+            <div class="project-info">
+                <p>Description: This project is a simple file encryptor tool developed in Python. It provides encryption and decryption functionalities using AES-256 encryption.</p>
+                <p>Technology Used: Python</p>
+                <p>GitHub: <a href="https://github.com/coopermcpartland/file-encryptor">Link to GitHub Repository</a></p>
+            </div>
+            <img src="screenshots/GUI.jpg" alt="File Encryptor Screenshot" class="screenshot">
+            <a href="https://github.com/coopermcpartland/file-encryptor" class="project-link">View Project</a>
+        </div>
+    </section>
+
+    <!-- Additional projects can be added here -->
+
+    <footer>
+        <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

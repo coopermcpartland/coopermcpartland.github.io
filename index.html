@@ -5,66 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooper McPartland's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for centering the name and navbar */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /* Additional styles for the About Me section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Styles for Skills, Languages, and Software/Applications boxes */
+        .skills,
+        .languages,
+        .software {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .skills h3,
+        .languages h3,
+        .software h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .skills ul,
+        .languages ul,
+        .software ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li,
+        .languages ul li,
+        .software ul li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skills ul li:before,
+        .languages ul li:before,
+        .software ul li:before {
+            content: "\2022";  /* Bullet character */
+            color: #555;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Cooper McPartland</h1>
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#experience">Experience</a>
-            <a href="#opensource">Open Source</a>
-            <a href="#ctf">CTF</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
         <div class="about-content">
+            <h2>About Me</h2>
             <p>My name is Cooper McPartland. I'm a 19-year-old aspiring Cyber Security Professional with a passion for exploring the world of cybersecurity. From a young age, I've been fascinated by the world of technology and its potential for both innovation and security challenges.</p>
-            <p>I'm currently on a journey to expand my knowledge and skills in cybersecurity, with a particular focus on areas such as network security, cryptography, and ethical hacking. I believe that in today's digital age, ensuring the security and privacy of information is paramount, and I'm dedicated to contributing to this field.</p>
-            <p>When I'm not diving into cybersecurity topics, you can find me exploring the latest trends in technology, participating in online CTF (Capture The Flag) challenges, and continuously learning new tools and techniques to stay ahead in this ever-evolving field.</p>
+            <p>When I'm not diving into cybersecurity topics, you can find me on the Football (Soccer) Pitch or catching up with friends</p>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Network Security</li>
+                <li>Cryptography</li>
+                <li>Ethical Hacking</li>
+                <li>Penetration Testing</li>
+                <li>Incident Response</li>
+                <li>Vulnerability Assessment</li>
+                <li>Firewall Configuration</li>
+                <li>Security Information and Event Management (SIEM)</li>
+            </ul>
+        </div>
+
+        <!-- Languages -->
+        <div class="languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>C/C++</li>
+                <li>Java</li>
+                <li>HTML/CSS</li>
+            </ul>
+        </div>
+
+        <!-- Software/Applications -->
+        <div class="software">
+            <h3>Software/Applications</h3>
+            <ul>
+                <li>Wireshark</li>
+                <li>Metasploit</li>
+                <li>Snort</li>
+                <li>Kali Linux</li>
+                <li>x64dbg</li>
+            </ul>
         </div>
     </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <!-- Hashed Password Cracker -->
-        <section id="hashed-password-cracker" class="project-section">
-            <div class="project-details">
-                <div class="project-header">
-                    <h3>Hashed Password Cracker</h3>
-                </div>
-                <div class="project-info">
-                    <p>This project demonstrates a simple hashed password cracker for educational purposes. It uses a brute-force technique to crack MD5 hashed passwords.</p>
-                    <p>To crack a password, enter the hashed password and specify the character set and password length.</p>
-                </div>
-            </div>
-            <div class="project-form">
-                <label for="hashed-password">Enter the hashed password:</label><br>
-                <input type="text" id="hashed-password" placeholder="Enter hashed password"><br>
-                <label for="character-set">Character set:</label><br>
-                <select id="character-set">
-                    <option value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789">Alphanumeric</option>
-                    <option value="abcdefghijklmnopqrstuvwxyz">Lowercase</option>
-                    <option value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">Uppercase</option>
-                    <option value="0123456789">Numeric</option>
-                </select><br>
-                <label for="password-length">Password length:</label><br>
-                <input type="number" id="password-length" placeholder="Password length"><br>
-                <button onclick="crackPassword()">Crack Password</button><br>
-                <div id="cracked-password"></div>
-            </div>
-        </section>
 
     <footer>
         <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
     </footer>
     
     <script src="script.js"></script>
-    <script src="hash.js"></script>
 </body>
 </html>
