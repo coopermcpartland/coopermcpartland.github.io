@@ -22,7 +22,7 @@ This portfolio showcases my projects, skills, and experience. It includes inform
 
 ## Usage
 
-You can view the live portfolio at [https://coopermcpartland.github.io/portfolio/](https://coopermcpartland.github.io).
+You can view the live portfolio at [https://coopermcpartland.github.io](https://coopermcpartland.github.io).
 
 ## Contact
 
