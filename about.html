@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper McPartland's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js"></script>
+    <style>
+        /* Additional styles for centering the name and navbar */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Additional styles for the About Me section */
+        #about {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            margin-bottom: 20px;
+        }
+
+        /* Additional styles for the Skills and Languages sections */
+        .skills-languages {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skills,
+        .languages {
+            flex: 1;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills h3,
+        .languages h3 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .skills ul,
+        .languages ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills li,
+        .languages li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cooper McPartland</h1>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>My name is Cooper McPartland. I'm a 19-year-old aspiring Cyber Security Professional with a passion for exploring the world of cybersecurity. From a young age, I've been fascinated by the world of technology and its potential for both innovation and security challenges.</p>
+            <p>I'm currently on a journey to expand my knowledge and skills in cybersecurity, with a particular focus on areas such as network security, cryptography, and ethical hacking. I believe that in today's digital age, ensuring the security and privacy of information is paramount, and I'm dedicated to contributing to this field.</p>
+            <p>When I'm not diving into cybersecurity topics, you can find me exploring the latest trends in technology, participating in online CTF (Capture The Flag) challenges, and continuously learning new tools and techniques to stay ahead in this ever-evolving field.</p>
+        </div>
+
+        <div class="skills-languages">
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Network Security</li>
+                    <li>Cryptography</li>
+                    <li>Penetration Testing</li>
+                    <li>Incident Response</li>
+                    <li>Security Auditing</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
+    </footer>
+</body>
+</html>

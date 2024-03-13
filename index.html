@@ -53,31 +53,52 @@
             margin-top: auto;
             width: 100%;
         }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .github-button {
+            display: block;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .github-button:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Cooper McPartland</h1>
+        <h1>Welcome to Cooper McPartland's Portfolio!</h1>
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>My name is Cooper McPartland. I'm a 19-year-old aspiring Cyber Security Professional with a passion for exploring the world of cybersecurity. From a young age, I've been fascinated by the world of technology and its potential for both innovation and security challenges.</p>
-            <p>I'm currently on a journey to expand my knowledge and skills in cybersecurity, with a particular focus on areas such as network security, cryptography, and ethical hacking. I believe that in today's digital age, ensuring the security and privacy of information is paramount, and I'm dedicated to contributing to this field.</p>
-            <p>When I'm not diving into cybersecurity topics, you can find me exploring the latest trends in technology, participating in online CTF (Capture The Flag) challenges, and continuously learning new tools and techniques to stay ahead in this ever-evolving field.</p>
-        </div>
-    </section>
+    <div class="intro-text">
+        <p>Welcome to my portfolio website! I designed and developed this site from scratch using HTML, CSS, and JavaScript. It showcases my projects and skills in the field of cybersecurity. Each section of this site was carefully crafted to provide visitors with insights into my work and expertise.</p>
+        <p>From creating responsive layouts with CSS to implementing interactive elements with JavaScript, I aimed to create an engaging and informative experience for visitors. Feel free to explore the various sections to learn more about my background, projects, and skills.</p>
+        <a href="https://github.com/coopermcpartland/coopermcpartland.github.io" class="github-button">View Source on GitHub</a>
+    </div>
 
     <footer>
         <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
     </footer>
-    
-    <script src="script.js"></script>
 </body>
 </html>

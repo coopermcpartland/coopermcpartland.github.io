@@ -54,7 +54,7 @@
             width: 100%;
         }
 
-        /* Additional styles for the Projects section */
+        /* Styles for project section */
         .project-section {
             max-width: 800px;
             margin: 0 auto;
@@ -102,19 +102,49 @@
     <header>
         <h1>Cooper McPartland's Projects</h1>
         <nav class="navbar">
-            <a href="index.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
+
+    <section class="project-section">
+        <div class="project-details">
+            <h2>Incident Response Automation Tool</h2>
+            <div class="project-info">
+                <p>This project is an Incident Response Automation Tool designed to streamline and automate initial steps of incident response in cybersecurity incidents.</p>
+                <p><strong>Skills Used:</strong></p>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Cybersecurity Incident Response</li>
+                    <li>Web Development</li>
+                </ul>
+                <p><strong>Usefulness:</strong></p>
+                <p>Incident response is a critical aspect of cybersecurity to quickly and effectively handle security incidents. This tool automates and guides the initial response steps, such as identifying the type of incident, providing specific response actions, and documenting the incident for further analysis.</p>
+                <p>The tool is valuable for security teams to respond promptly to incidents, minimize the impact of cybersecurity threats, and maintain the security and integrity of systems and data.</p>
+            </div>
+            <a href="incident_response.html" class="project-link">View Project</a>
+        </div>
+    </section>
 
     <section class="project-section">
         <div class="project-details">
             <h2>File Encryptor</h2>
             <div class="project-info">
                 <p>Description: This project is a simple file encryptor tool developed in Python. It provides encryption and decryption functionalities using AES-256 encryption.</p>
-                <p>Technology Used: Python</p>
-                <p>GitHub: <a href="https://github.com/coopermcpartland/file-encryptor">Link to GitHub Repository</a></p>
+                <p><strong>Skills Used:</strong></p>
+                <ul>
+                    <li>Python</li>
+                    <li>Cryptography</li>
+                    <li>File Handling</li>
+                    <li>Command Line Interface (CLI) Development</li>
+                </ul>
+                <p><strong>Usefulness:</strong></p>
+                <p>The File Encryptor is useful for individuals or organizations who need to securely encrypt sensitive files. It offers a straightforward and reliable way to protect sensitive information from unauthorized access. Users can encrypt their files using strong encryption algorithms and decrypt them when needed, ensuring data confidentiality.</p>
+                <p>It can be particularly valuable for professionals handling sensitive data, such as confidential documents, financial records, or personal information, providing a secure means of data protection.</p>
             </div>
             <img src="screenshots/GUI.jpg" alt="File Encryptor Screenshot" class="screenshot">
             <a href="https://github.com/coopermcpartland/file-encryptor" class="project-link">View Project</a>
@@ -126,7 +156,5 @@
     <footer>
         <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
     </footer>
-    
-    <script src="script.js"></script>
 </body>
 </html>

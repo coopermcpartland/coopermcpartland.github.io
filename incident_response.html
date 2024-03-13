@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response Automation Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 60px; /* Adjust for footer height */
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #28a745;
+        }
+        .error {
+            background-color: #dc3545;
+        }
+
+        /* Styles for header and footer */
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            left: 0;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="projects.html">Go back</a>
+    </header>
+    
+    <div class="container">
+        <h1>Incident Response Automation Tool</h1>
+        <div class="explanation">
+            <p>Welcome to the Incident Response Automation Tool demonstration. This tool is designed to automate initial steps of incident response in cybersecurity incidents.</p>
+            <p>Please select the type of incident you want to report:</p>
+        </div>
+        
+        <form id="incidentForm">
+            <div class="form-group">
+                <label for="incidentType">Incident Type:</label>
+                <select id="incidentType" name="incidentType" required>
+                    <option value="">Select Incident Type</option>
+                    <option value="malware_infection">Malware Infection</option>
+                    <option value="data_breach">Data Breach</option>
+                    <option value="dos_attack">Denial of Service (DoS) Attack</option>
+                    <option value="phishing_attempt">Phishing Attempt</option>
+                    <option value="suspicious_activity">Suspicious Activity</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="incidentDescription">Incident Description:</label>
+                <textarea id="incidentDescription" name="incidentDescription" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Incident</button>
+        </form>
+        
+        <div class="message" id="message"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cooper McPartland. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('incidentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var incidentType = document.getElementById('incidentType').value;
+            var incidentDescription = document.getElementById('incidentDescription').value;
+
+            // Simulate incident response
+            if (incidentType && incidentDescription) {
+                // Simulated incident response logic
+                var responseMessage = 'Incident Response initiated for: ' + incidentType;
+                responseMessage += '<br><br>';
+                responseMessage += 'Taking the following actions:';
+                responseMessage += '<ul>';
+                
+                switch (incidentType.toLowerCase()) {
+                    case 'malware_infection':
+                        responseMessage += '<li>Isolate affected system</li>';
+                        responseMessage += '<li>Perform malware scan and removal</li>';
+                        responseMessage += '<li>Review system logs for malicious activity</li>';
+                        responseMessage += '<li>Implement firewall rules to block malicious traffic</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    case 'data_breach':
+                        responseMessage += '<li>Isolate affected systems and networks</li>';
+                        responseMessage += '<li>Collect and preserve evidence</li>';
+                        responseMessage += '<li>Notify affected individuals and regulatory authorities</li>';
+                        responseMessage += '<li>Conduct forensic analysis</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    case 'dos_attack':
+                        responseMessage += '<li>Identify and block malicious traffic sources</li>';
+                        responseMessage += '<li>Configure web application firewall (WAF) rules</li>';
+                        responseMessage += '<li>Monitor for ongoing attacks</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    case 'phishing_attempt':
+                        responseMessage += '<li>Identify and block phishing domain</li>';
+                        responseMessage += '<li>Notify users to be cautious of phishing emails</li>';
+                        responseMessage += '<li>Review email logs for suspicious activity</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    case 'suspicious_activity':
+                        responseMessage += '<li>Monitor the system for further suspicious activity</li>';
+                        responseMessage += '<li>Review system and network logs</li>';
+                        responseMessage += '<li>Implement additional security controls</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    case 'other':
+                        responseMessage += '<li>Investigate and analyze the incident</li>';
+                        responseMessage += '<li>Implement appropriate security measures</li>';
+                        responseMessage += '<li>Document findings and lessons learned</li>';
+                        responseMessage += '</ul>';
+                        break;
+                    default:
+                        responseMessage += '<li>Investigate and analyze the incident</li>';
+                        responseMessage += '<li>Implement appropriate security measures</li>';
+                        responseMessage += '<li>Document findings and lessons learned</li>';
+                        responseMessage += '</ul>';
+                        break;
+                }
+
+                showMessage('success', responseMessage);
+            } else {
+                showMessage('error', 'Please select an incident type and provide a description.');
+            }
+        });
+
+        function showMessage(type, message) {
+            var messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = message;
+            messageDiv.className = 'message ' + type;
+        }
+    </script>
+</body>
+</html>
